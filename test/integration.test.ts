@@ -37,7 +37,7 @@ describe("integration test", () => {
     assert.deepEqual(files, ["0.app.js", "0.app.js.map", "2.app.js", "2.app.js.map"]);
   });
 
-  it("should return chunk files depending on code split occurrence", () => {
+  it("should return chunk files depending on code split", () => {
     instance.addChunksFrom("./src/modules/multiplesplits/routes.ts", 1);
     const files = instance.getFiles().sort();
     assert.deepEqual(files, ["0.app.js", "0.app.js.map", "1.app.js", "1.app.js.map", "4.app.js", "4.app.js.map"]);

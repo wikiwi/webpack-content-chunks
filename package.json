@@ -12,10 +12,10 @@
     "ci:coveralls": "cat coverage/lcov.info | coveralls",
     "docs": "npm run clean && npm run build && documentation build dist/es6/index.js --theme node_modules/documentation-markdown-api-theme -f html -o api.md && cat api.md | add-text-to-markdown -w --section API ./README.md && rm api.md",
     "test": "npm run test:lint && npm run test:coverage",
-    "test:coverage": "cross-env TS_NODE_PROJECT=tsconfig.test.json istanbul cover -e .ts _mocha -- --opts mocha.opts",
+    "test:coverage": "cross-env TS_NODE_PROJECT=./test/tsconfig.json istanbul cover -e .ts _mocha -- --opts mocha.opts",
     "test:lint": "gulp lint",
-    "test:run": "cross-env TS_NODE_PROJECT=tsconfig.test.json mocha --opts mocha.opts",
-    "test:watch": "cross-env TS_NODE_PROJECT=tsconfig.test.json mocha --opts mocha.opts --watch",
+    "test:run": "cross-env TS_NODE_PROJECT=./test/tsconfig.json mocha --opts mocha.opts",
+    "test:watch": "cross-env TS_NODE_PROJECT=./test/tsconfig.json mocha --opts mocha.opts --watch",
     "typings": "typings install"
   },
   "engines": {
