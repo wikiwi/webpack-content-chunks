@@ -6,7 +6,7 @@
  */
 
 /**
- * A class for adding chunks and retrieving files from all added chunks.
+ * A class for adding chunks and retrieving files from added chunks.
  */
 export class WebpackInitialChunks {
   private modules: { [filename: string]: Module };
