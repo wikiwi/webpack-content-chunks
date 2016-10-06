@@ -2,6 +2,14 @@
 
 A solution for adding webpack initial chunks to the server response.
 
+[![Build Status Widget]][Build Status]
+[![Coverage Status Widget]][Coverage Status]
+
+[Build Status]: https://travis-ci.org/wikiwi/webpack-initial-chunks
+[Build Status Widget]: https://travis-ci.org/wikiwi/webpack-initial-chunks.svg?branch=master
+[Coverage Status]: https://coveralls.io/github/wikiwi/webpack-initial-chunks?branch=master
+[Coverage Status Widget]: https://coveralls.io/repos/github/wikiwi/webpack-initial-chunks/badge.svg?branch=master
+
 # API
 
 ## `WebpackInitialChunks`
