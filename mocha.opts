@@ -1,0 +1,4 @@
+--compilers ts:ts-node/register
+--reporter dot
+test/**/*.test.ts
+

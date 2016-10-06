@@ -1,0 +1,114 @@
+{
+  "chunks": [{
+      "files": [
+        "0.app.js",
+        "0.app.js.map"
+      ],
+      "origins": [{
+          "moduleId": 299,
+          "moduleName": "./src/modules/multiplesplits/routes.ts",
+          "loc": "10:25-51",
+          "name": null,
+          "reasons": [
+            "duplicate"
+          ]
+        },
+        {
+          "moduleId": 299,
+          "moduleName": "./src/modules/multiplesplits/routes.ts",
+          "loc": "24:25-51",
+          "name": null,
+          "reasons": [
+            "duplicate"
+          ]
+        },
+        {
+          "moduleId": 320,
+          "moduleName": "./src/modules/multiplechunks/routes.ts",
+          "loc": "9:25-60",
+          "name": null,
+          "reasons": [
+            "duplicate"
+          ]
+        }
+      ]
+    },
+    {
+      "files": [
+        "1.app.js",
+        "1.app.js.map"
+      ],
+      "origins": [{
+          "moduleId": 299,
+          "moduleName": "./src/modules/multiplesplits/routes.ts",
+          "loc": "10:53-85",
+          "name": null,
+          "reasons": [
+            "aggressive-merge"
+          ]
+        },
+        {
+          "moduleId": 299,
+          "moduleName": "./src/modules/multiplesplits/routes.ts",
+          "loc": "24:53-86",
+          "name": null,
+          "reasons": [
+            "aggressive-merge"
+          ]
+        }
+      ]
+    },
+    {
+      "files": [
+        "2.app.js",
+        "2.app.js.map"
+      ],
+      "origins": [{
+        "moduleId": 320,
+        "moduleName": "./src/modules/multiplechunks/routes.ts",
+        "loc": "9:62-91",
+        "name": null,
+        "reasons": []
+      }]
+    },
+    {
+      "files": [
+        "3.app.js",
+        "3.app.js.map"
+      ],
+      "origins": [{
+        "moduleId": 323,
+        "moduleName": "./src/modules/singlechunk/routes.ts",
+        "loc": "7:12-45",
+        "name": null,
+        "reasons": []
+      }]
+    },
+    {
+      "files": [
+        "4.app.js",
+        "4.app.js.map"
+      ],
+      "origins": [{
+        "moduleId": 299,
+        "moduleName": "./src/modules/multiplesplits/routes.ts",
+        "loc": "24:53-86",
+        "name": null,
+        "reasons": []
+      }]
+    },
+    {
+      "files": [
+        "app.js",
+        "app.js.map"
+      ],
+      "origins": [{
+        "moduleId": 764,
+        "moduleName": "multi main",
+        "loc": "",
+        "name": "main",
+        "reasons": []
+      }]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "curly": ["error"],
+    "semi": ["error", "always"],
+    "block-spacing": ["error", "always"],
+    "comma-dangle": ["error", "always-multiline"],
+    "comma-spacing": ["error"],
+    "comma-style": ["error"],
+    "computed-property-spacing": ["error"],
+    "consistent-this": ["error"],
+    "func-call-spacing": ["error"],
+    "new-parens": ["error"],
+    "no-lonely-if": ["error"],
+    "arrow-parens": ["error"],
+    "object-shorthand": ["error"],
+    "no-var": ["error"],
+    "prefer-const": ["error"],
+    "prefer-arrow-callback": ["error"],
+    "prefer-template": ["error"],
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "brace-style": ["error"],
+    "camelcase": ["error"],
+    "quotes": ["error", "double", {
+      "avoidEscape": true,
+      "allowTemplateLiterals": true
+    }],
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": true,
+      "optionalDependencies": true,
+      "peerDependencies": false
+    }]
+  }
+}
