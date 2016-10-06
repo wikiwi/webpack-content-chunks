@@ -25,13 +25,13 @@ export class WebpackInitialChunks {
    * Adds all chunks that originated from the nth-codesplit in
    * given module.
    * @param {string} moduleName - Name of module, can be obtained using node's __filename feature.
-   * @param {number} occurrence - Defines nth-codesplit starting at 0.
+   * @param {number} codeSplit - Defines nth-codesplit starting at 0.
    */
-  public addChunksFrom(moduleName: string, occurrence: number): void {
+  public addChunksFrom(moduleName: string, codeSplit: number): void {
     if (moduleName.substr(0, 2) !== "./") {
       moduleName = "./" + moduleName;
     }
-    const files = this.modules[moduleName].chunks[occurrence].files;
+    const files = this.modules[moduleName].chunks[codeSplit].files;
     this.files.push(...files);
   }
 
