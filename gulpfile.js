@@ -4,6 +4,7 @@ const tslint = require("gulp-tslint");
 const jsonlint = require("gulp-jsonlint");
 const eslint = require("gulp-eslint");
 const merge = require("merge2");
+const yamllint = require("gulp-yaml-validate");
 
 gulp.task("es6", ["lint"], () => {
   const tsProject = ts.createProject("tsconfig.json", {
@@ -56,17 +57,22 @@ gulp.task("tslint", () => {
 });
 
 gulp.task("eslint", () => {
-  return gulp.src("./*.js")
+  return gulp.src("./*.js", { dot: true })
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });
 
 gulp.task("jsonlint", () => {
-  return gulp.src("./*.json")
+  return gulp.src("./*.json", { dot: true })
     .pipe(jsonlint())
     .pipe(jsonlint.reporter());
 });
 
-gulp.task("lint", ["jsonlint", "eslint", "tslint"]);
+gulp.task("yamllint", () => {
+  return gulp.src("./*.yml", { dot: true })
+    .pipe(yamllint());
+});
+
+gulp.task("lint", ["jsonlint", "eslint", "tslint", "yamllint"]);
 gulp.task("default", ["lint", "commonjs", "esm", "es6"]);
