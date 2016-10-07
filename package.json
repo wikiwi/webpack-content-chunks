@@ -1,7 +1,7 @@
 {
   "name": "webpack-initial-chunks",
   "version": "0.1.1",
-  "description": "A solution for adding all required webpack chunks to the initial server response.",
+  "description": "A solution for adding webpack initial chunks to the server response.",
   "homepage": "https://github.com/wikiwi/webpack-initial-chunks",
   "repository": {
     "type": "git",
