@@ -111,26 +111,26 @@ Use the [webpack-stats-plugin](https://github.com/FormidableLabs/webpack-stats-p
 We recommend to following config:
 
 ```javascript
-    new StatsWriterPlugin({
-      filename: "stats.json",
-      fields: ["chunks"],
-      transform: (data) => {
-        const result = { chunks: [] };
-        for (const c of data.chunks) {
-          const entry = {
-            files: c.files,
-            origins: [],
-          };
-          for (const origin of c.origins) {
-            delete origin.module;
-            delete origin.moduleIdentifier;
-            entry.origins.push(origin);
-          }
-          result.chunks.push(entry);
-        }
-        return JSON.stringify(result, null, 2);
-      },
-    }),
+new StatsWriterPlugin({
+  filename: "stats.json",
+  fields: ["chunks"],
+  transform: (data) => {
+    const result = { chunks: [] };
+    for (const c of data.chunks) {
+      const entry = {
+        files: c.files,
+        origins: [],
+      };
+      for (const origin of c.origins) {
+        delete origin.module;
+        delete origin.moduleIdentifier;
+        entry.origins.push(origin);
+      }
+      result.chunks.push(entry);
+    }
+    return JSON.stringify(result, null, 2);
+  },
+}),
 ```
 
 If you are using the `webpack-dev-middleware` follow this [instruction](https://github.com/webpack/webpack-dev-middleware#server-side-rendering).
@@ -145,9 +145,9 @@ It seems you are using webpack for you server side code. In this case
 you need to [tell webpack](https://webpack.github.io/docs/api-in-modules.html#__filename) to passthrough `__filename`.
 
 ```javascript
-    node: {
-      __filename: true,
-    }
+node: {
+  __filename: true,
+}
 ```
 
 ## API Reference
