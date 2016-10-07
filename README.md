@@ -85,7 +85,7 @@ function matchMoreRoutes(url, initialChunks) {
       // Third code split in file.
       initialChunks.addChunksFrom(__filename, 2);
       Promise.all([System.import("./module1"), System.import("./module2")])
-       .then(([module1, module2]) => { /* ... */ });
+        .then(([module1, module2]) => { /* ... */ });
       break;
   }
 }
