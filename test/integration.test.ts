@@ -63,12 +63,12 @@ describe("integration test", () => {
     assert.deepEqual(files, ["0.app.js", "0.app.js.map", "2.app.js", "2.app.js.map"]);
   });
 
-  it("should throw when adding chunks form unknown code splits", () => {
+  it("should throw when adding chunks from unknown code splits", () => {
     const willThrow = () => instance.addChunksFrom("./src/modules/multiplechunks/routes.ts", 3);
     assert.throws(willThrow);
   });
 
-  it("should throw when adding chunks form unknown modules", () => {
+  it("should throw when adding chunks from unknown modules", () => {
     const willThrow = () => instance.addChunksFrom("./src/modules/unknown/routes.ts", 0);
     assert.throws(willThrow);
   });

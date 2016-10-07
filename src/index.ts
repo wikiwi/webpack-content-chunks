@@ -31,12 +31,12 @@ export class WebpackInitialChunks {
     if (moduleName.substr(0, 2) !== "./") {
       moduleName = "./" + moduleName;
     }
-    const files = this.modules[moduleName].chunks[codeSplit].files;
+    const files = this.modules[moduleName].codeSplits[codeSplit].files;
     this.files.push(...files);
   }
 
   /**
-   * Returns an array of files from all added chunks.
+   * Returns an array of files from added chunks.
    * @returns {string[]} - Array of files.
    */
   public getFiles(): string[] {
@@ -64,25 +64,25 @@ export class WebpackInitialChunks {
   }
 }
 
-interface Chunk {
+interface CodeSplit {
   files: string[];
   line: number;
 }
 
 class Module {
-  public chunks: Chunk[];
+  public codeSplits: CodeSplit[];
 
   constructor() {
-    this.chunks = [];
+    this.codeSplits = [];
   }
 
   public add(files: string[], line: number): void {
-    for (const chunk of this.chunks) {
-      if (chunk.line === line) {
-        chunk.files.push(...files);
+    for (const cs of this.codeSplits) {
+      if (cs.line === line) {
+        cs.files.push(...files);
         return;
       }
     }
-    this.chunks.push({ files: files.slice(), line });
+    this.codeSplits.push({ files: files.slice(), line });
   }
 }
