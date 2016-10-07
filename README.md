@@ -1,17 +1,10 @@
 # webpack-initial-chunks
 
+A solution for adding webpack initial chunks to the server response.
+
+[![NPM Version Widget]][npm version]
 [![Build Status Widget]][build status]
 [![Coverage Status Widget]][coverage status]
-
-[build status]: https://travis-ci.org/wikiwi/webpack-initial-chunks
-
-[build status widget]: https://travis-ci.org/wikiwi/webpack-initial-chunks.svg?branch=master
-
-[coverage status]: https://coveralls.io/github/wikiwi/webpack-initial-chunks?branch=master
-
-[coverage status widget]: https://coveralls.io/repos/github/wikiwi/webpack-initial-chunks/badge.svg?branch=master
-
-A solution for adding webpack initial chunks to the server response.
 
 ## TOC
 
@@ -31,6 +24,7 @@ A solution for adding webpack initial chunks to the server response.
     + [`addChunksFrom(moduleName: string, codeSplit: number)`](#addchunksfrommodulename-string-codesplit-number)
     + [`getFiles(): Array<string>`](#getfiles-arraystring)
     + [`reset()`](#reset)
+- [Contributions](#contributions)
 
 <!-- tocstop -->
 
@@ -185,3 +179,15 @@ Resets instance as if no chunks has been added.
 ## Contributions
 
 Contributions welcome! Make sure to pass `$ npm run test` and run `$ npm run docs` when your changes affects the documentation.
+
+[npm version]: https://www.npmjs.com/package/webpack-initial-chunks
+
+[npm version widget]: https://img.shields.io/npm/v/webpack-initial-chunks.svg?style=flat-square
+
+[build status]: https://travis-ci.org/wikiwi/webpack-initial-chunks
+
+[build status widget]: https://img.shields.io/travis/wikiwi/webpack-initial-chunks/master.svg?style=flat-square
+
+[coverage status]: https://coveralls.io/github/wikiwi/webpack-initial-chunks?branch=master
+
+[coverage status widget]: https://img.shields.io/coveralls/wikiwi/webpack-initial-chunks/master.svg?style=flat-square
