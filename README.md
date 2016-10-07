@@ -181,3 +181,7 @@ Returns: **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 #### `reset()`
 
 Resets instance as if no chunks has been added.
+
+## Contributions
+
+Contributions welcome! Make sure to pass `$ npm run test` and run `$ npm run docs` when your changes affects the documentation.
