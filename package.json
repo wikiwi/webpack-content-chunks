@@ -1,6 +1,6 @@
 {
   "name": "webpack-initial-chunks",
-  "version": "0.1.0-beta.0",
+  "version": "0.1.0-beta.1",
   "description": "A solution for adding all required webpack chunks to the initial server response.",
   "jsnext:main": "./dist/esm/index.js",
   "main": "./dist/commonjs/index.js",
