@@ -22,7 +22,7 @@ export class WebpackContentChunks {
   }
 
   /**
-   * Adds all chunks that originated from the nth-codesplit in
+   * Adds all content chunks that originated from the nth-codesplit in
    * given module.
    * @param {string} moduleName - Name of module, can be obtained using node's __filename feature.
    * @param {number} codeSplit - Defines nth-codesplit starting at 0.

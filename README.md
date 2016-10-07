@@ -94,8 +94,8 @@ function matchMoreRoutes(url, contentChunks) {
 ## How it works
 
 _webpack-content-chunks_ uses webpack stats to gather information about existing
-chunks. It then groups chunks originating from the same line of code together as
-a single `code split`.
+chunks. It then groups content chunks originating from the same line of code together
+as a single `code split`.
 
 ## Troubleshooting
 
@@ -148,7 +148,7 @@ node: {
 
 ### `WebpackContentChunks`
 
-A class for adding chunks and retrieving files from added chunks.
+A class for adding content chunks and retrieving files from added chunks.
 
 #### `constructor(stats: Object)`
 
@@ -158,7 +158,7 @@ A class for adding chunks and retrieving files from added chunks.
 
 #### `addChunksFrom(moduleName: string, codeSplit: number)`
 
-Adds all chunks that originated from the nth-codesplit in
+Adds all content chunks that originated from the nth-codesplit in
 given module.
 
 **Parameters**
@@ -168,7 +168,7 @@ given module.
 
 #### `getFiles(): Array<string>`
 
-Returns an array of files from all added chunks.
+Returns an array of files from added chunks.
 
 Returns: **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>** - Array of files.
 
