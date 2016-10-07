@@ -17,6 +17,7 @@ deploy:
     tags: true
     node: "4"
   skip_cleanup: true
+  email: "vinh@wikiwi.io"
   api_key:
     secure: N+XvZo/9opcjIqpvEpF2mB4UAIC955+c97/+heqBWXQyNYffv8ajXgKbAgr075hpal+puknrcOfccxmjV2/aG7A8utep9jVjMXcitmWi+GEVF50FReX3eGRhbVpcDD7CdRpw8KP+05Wyz5IID+nhm65AUEeCb9mWXbBIhanDVep48npqG9xT/62l/BkWFClRoHQ0dWb5EJOt3p0xJN45Uc7sAGaoTYzw/5MG7ws2k7flvbmo7rTLpDaK7BydcEM2a78Cr71y3iob/Gpe/v9364MIlR2mZD8mZHoSh15IVMeDd5a3Wt5whdQynYwC66PM5wMX9z40KQF7HF28uNcfm4503ukn2A9EMFRuDOJqPbuy2kUoxNDnGqjE1Wl7lmaAs4N1R4Kd/r6B1Vgw9TY82LCmUySaCwKfXF+M8zi3o2TY7JE+bhM8hHak5nDqgAABdiqOtEWzLLid7a4dVwIIj4vroz34nmmqU2UXOee9Fvy5i4Bx7zffkh3/zlrrh8VZEBl/+phEsle3R7sLmTAZrOvGVFLgP2ztFKyw5h/2wUyTvVODXpfCcVwncjKpzauMxonDfe7QOpV6umenhef6OnfKzWx1z4pU9gUQKp+CXcrJrdTqvsFD0umWwWSWuTS+Dr4zYpw8vLDsD+TzX2xI3VKvBRvmCPyW/LrRsbGB6C0=
 
