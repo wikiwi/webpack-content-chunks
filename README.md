@@ -49,7 +49,7 @@ you want to optimize and include all initial chunks to the server response.
 ## Example
 
 _This is not a fully functional example and serves as a demonstration of the
-concept. It uses ES6 (webpack2) but would work with `require`, and `require.ensure`
+concept. It uses ES6 (webpack2), but would work with `require`, and `require.ensure`
 as well._
 
 ```javascript
@@ -108,7 +108,7 @@ a single `code split`.
 ### Where to get `stats.json`
 
 Use the [webpack-stats-plugin](https://github.com/FormidableLabs/webpack-stats-plugin).
-We recommend to following config:
+We recommend the following config:
 
 ```javascript
 new StatsWriterPlugin({
