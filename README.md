@@ -1,6 +1,6 @@
-# webpack-initial-chunks
+# webpack-content-chunks
 
-A solution for adding webpack initial chunks to the server response.
+A solution for adding webpack content chunks to the server response.
 
 [![NPM Version Widget]][npm version]
 [![Build Status Widget]][build status]
@@ -19,7 +19,7 @@ A solution for adding webpack initial chunks to the server response.
   * [My `stats.json` is huge!](#my-statsjson-is-huge)
   * [`__filename` always returns /index.js](#__filename-always-returns-indexjs)
 - [API Reference](#api-reference)
-  * [`WebpackInitialChunks`](#webpackinitialchunks)
+  * [`WebpackContentChunks`](#webpackcontentchunks)
     + [`constructor(stats: Object)`](#constructorstats-object)
     + [`addChunksFrom(moduleName: string, codeSplit: number)`](#addchunksfrommodulename-string-codesplit-number)
     + [`getFiles(): Array<string>`](#getfiles-arraystring)
@@ -31,14 +31,14 @@ A solution for adding webpack initial chunks to the server response.
 ## Installation
 
 ```sh
-npm install webpack-initial-chunks --save
+npm install webpack-content-chunks --save
 ```
 
 ## Use Case
 
 You already have an universal (isomorphic) app with server side rendering,
 routing, and code splitting using webpack. To avoid unnecessary round trips
-you want to optimize and include all initial chunks to the server response.
+you want to optimize and include all content chunks to the server response.
 
 ## Example
 
@@ -48,42 +48,42 @@ as well._
 
 ```javascript
 import * as fs from "fs";
-import { WebpackInitialChunks } from "webpack-initial-chunks";
+import { WebpackContentChunks } from "webpack-content-chunks";
 
 const stats = JSON.parse(fs.readFileSync("./stats.json", "utf8"));
 
 function middleware(req, res) {
-  const initialChunks = new WebpackInitialChunks(stats);
+  const contentChunks = new WebpackContentChunks(stats);
 
-  matchRoutes(req.url, initialChunks);
-  matchMoreRoutes(req.url, initialChunks);
+  matchRoutes(req.url, contentChunks);
+  matchMoreRoutes(req.url, contentChunks);
 
-  const chunks = initialChunks.getFiles().filter(path => path.endsWith(".js"))
+  const chunks = contentChunks.getFiles().filter(path => path.endsWith(".js"))
     .map(filename => `<script src="/${filename}" />`);
 
   res.send(`<html><body><script src="/main.js" />${chunks}</body></html>`);
 }
 
-function matchRoutes(url, initialChunks) {
+function matchRoutes(url, contentChunks) {
   switch(url) {
     case "/home":
       // First code split in file.
-      initialChunks.addChunksFrom(__filename, 0);
+      contentChunks.addChunksFrom(__filename, 0);
       System.import("./home").then(() => { /* ... */ });
       break;
     case "/contact":
       // Second code split in file.
-      initialChunks.addChunksFrom(__filename, 1);
+      contentChunks.addChunksFrom(__filename, 1);
       System.import("./contact").then(() => { /* ... */ });
       break;
   }
 }
 
-function matchMoreRoutes(url, initialChunks) {
+function matchMoreRoutes(url, contentChunks) {
   switch(url) {
     case "/article":
       // Third code split in file.
-      initialChunks.addChunksFrom(__filename, 2);
+      contentChunks.addChunksFrom(__filename, 2);
       Promise.all([System.import("./module1"), System.import("./module2")])
         .then(([module1, module2]) => { /* ... */ });
       break;
@@ -93,7 +93,7 @@ function matchMoreRoutes(url, initialChunks) {
 
 ## How it works
 
-_webpack-initial-chunks_ uses webpack stats to gather information about existing
+_webpack-content-chunks_ uses webpack stats to gather information about existing
 chunks. It then groups chunks originating from the same line of code together as
 a single `code split`.
 
@@ -146,7 +146,7 @@ node: {
 
 ## API Reference
 
-### `WebpackInitialChunks`
+### `WebpackContentChunks`
 
 A class for adding chunks and retrieving files from added chunks.
 
@@ -180,14 +180,14 @@ Resets instance as if no chunks has been added.
 
 Contributions welcome! Make sure to pass `$ npm run test` and run `$ npm run docs` when your changes affects the documentation.
 
-[npm version]: https://www.npmjs.com/package/webpack-initial-chunks
+[npm version]: https://www.npmjs.com/package/webpack-content-chunks
 
-[npm version widget]: https://img.shields.io/npm/v/webpack-initial-chunks.svg?style=flat-square
+[npm version widget]: https://img.shields.io/npm/v/webpack-content-chunks.svg?style=flat-square
 
-[build status]: https://travis-ci.org/wikiwi/webpack-initial-chunks
+[build status]: https://travis-ci.org/wikiwi/webpack-content-chunks
 
-[build status widget]: https://img.shields.io/travis/wikiwi/webpack-initial-chunks/master.svg?style=flat-square
+[build status widget]: https://img.shields.io/travis/wikiwi/webpack-content-chunks/master.svg?style=flat-square
 
-[coverage status]: https://coveralls.io/github/wikiwi/webpack-initial-chunks?branch=master
+[coverage status]: https://coveralls.io/github/wikiwi/webpack-content-chunks?branch=master
 
-[coverage status widget]: https://img.shields.io/coveralls/wikiwi/webpack-initial-chunks/master.svg?style=flat-square
+[coverage status widget]: https://img.shields.io/coveralls/wikiwi/webpack-content-chunks/master.svg?style=flat-square

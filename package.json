@@ -1,14 +1,14 @@
 {
-  "name": "webpack-initial-chunks",
+  "name": "webpack-content-chunks",
   "version": "0.1.2",
-  "description": "A solution for adding webpack initial chunks to the server response.",
-  "homepage": "https://github.com/wikiwi/webpack-initial-chunks",
+  "description": "A solution for adding webpack content chunks to the server response.",
+  "homepage": "https://github.com/wikiwi/webpack-content-chunks",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wikiwi/webpack-initial-chunks.git"
+    "url": "https://github.com/wikiwi/webpack-content-chunks.git"
   },
   "bugs": {
-    "url": "https://github.com/wikiwi/webpack-initial-chunks/issues"
+    "url": "https://github.com/wikiwi/webpack-content-chunks/issues"
   },
   "jsnext:main": "./dist/esm/index.js",
   "main": "./dist/commonjs/index.js",
@@ -35,7 +35,7 @@
     "server-side-rendering",
     "code-splitting"
   ],
-  "author": "Chi Vinh Le and contributors (https://github.com/wikiwi/webpack-initial-chunks/graphs/contributors)",
+  "author": "Chi Vinh Le and contributors (https://github.com/wikiwi/webpack-content-chunks/graphs/contributors)",
   "license": "MIT",
   "devDependencies": {
     "add-text-to-markdown": "^1.0.2",

@@ -7,6 +7,6 @@ if [[ $# != 1 ]]; then
   exit 1
 fi
 
-npm version "$1" -m "webpack-initial-chunks release %s"
+npm version "$1" -m "webpack-content-chunks release %s"
 
 echo "Please check your changes with 'git log' and finally execute 'git push --follow-tags'"

@@ -13,7 +13,7 @@ before_deploy:
 deploy:
   provider: npm
   on:
-    repo: wikiwi/webpack-initial-chunks
+    repo: wikiwi/webpack-content-chunks
     tags: true
     node: "4"
   skip_cleanup: true

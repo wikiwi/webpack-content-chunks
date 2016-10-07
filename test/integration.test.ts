@@ -4,12 +4,12 @@
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE file for details.
  */
-import { WebpackInitialChunks } from "../src/index";
+import { WebpackContentChunks } from "../src/index";
 import { assert } from "chai";
 import * as fs from "fs";
 
 describe("integration test", () => {
-  let instance: WebpackInitialChunks;
+  let instance: WebpackContentChunks;
   let stats: any;
 
   before(() => {
@@ -17,7 +17,7 @@ describe("integration test", () => {
   });
 
   beforeEach(() => {
-    instance = new WebpackInitialChunks(stats);
+    instance = new WebpackContentChunks(stats);
   });
 
   it("should initially return an empty file list", () => {
