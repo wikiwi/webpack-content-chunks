@@ -10,6 +10,9 @@
   "bugs": {
     "url": "https://github.com/wikiwi/webpack-content-chunks/issues"
   },
+  "files": [
+    "dist"
+  ],
   "jsnext:main": "./dist/esm/index.js",
   "main": "./dist/commonjs/index.js",
   "typings": "./dist/index.d.ts",
