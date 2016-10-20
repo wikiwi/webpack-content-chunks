@@ -17,7 +17,6 @@
   "main": "./dist/commonjs/index.js",
   "typings": "./dist/index.d.ts",
   "scripts": {
-    "bootstrap": "npm run typings",
     "build": "gulp",
     "clean": "rm -rf dist",
     "ci:coveralls": "cat coverage/lcov.info | coveralls",
@@ -26,8 +25,7 @@
     "test:coverage": "cross-env TS_NODE_PROJECT=./test/tsconfig.json istanbul cover -e .ts _mocha -- --opts mocha.opts",
     "test:lint": "gulp lint",
     "test:run": "cross-env TS_NODE_PROJECT=./test/tsconfig.json mocha --opts mocha.opts",
-    "test:watch": "cross-env TS_NODE_PROJECT=./test/tsconfig.json mocha --opts mocha.opts --watch",
-    "typings": "typings install"
+    "test:watch": "cross-env TS_NODE_PROJECT=./test/tsconfig.json mocha --opts mocha.opts --watch"
   },
   "engines": {
     "node": ">=4"
@@ -41,6 +39,9 @@
   "author": "Chi Vinh Le and contributors (https://github.com/wikiwi/webpack-content-chunks/graphs/contributors)",
   "license": "MIT",
   "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/mocha": "^2.2.32",
+    "@types/node": "^6.0.45",
     "add-text-to-markdown": "^1.0.2",
     "cash-cat": "^0.2.0",
     "cash-rm": "^0.2.0",
@@ -66,7 +67,6 @@
     "rimraf": "^2.5.4",
     "ts-node": "~1.2.3",
     "tslint": "^3.15.1",
-    "typescript": "^2.0.3",
-    "typings": "^1.4.0"
+    "typescript": "^2.0.3"
   }
 }
