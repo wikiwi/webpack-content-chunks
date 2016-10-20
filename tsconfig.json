@@ -3,6 +3,7 @@
     "target": "es6",
     "module": "es5",
     "noImplicitAny": true,
+    "noFallthroughCasesInSwitch": true,
     "sourceMap": true
   },
   "include": [

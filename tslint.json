@@ -24,6 +24,7 @@
     "no-var-keyword": true,
     "no-var-requires": true,
     "only-arrow-functions": true,
+    "no-shadowed-variable": true,
     "no-unused-new": true,
     "no-unused-expression": true,
     "no-unused-variable": true,
