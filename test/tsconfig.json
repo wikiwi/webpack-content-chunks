@@ -4,8 +4,7 @@
     "module": "commonjs"
   },
   "include": [
-    "./**/*.ts",
-    "../typings/index.d.ts"
+    "./**/*.ts"
   ],
   "exclude": [
     "node_modules"
