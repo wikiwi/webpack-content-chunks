@@ -15,7 +15,6 @@ let g:formatters_javascript = ['eslint']
 :  if exists(":Autoformat") | :Autoformat | endif
 :endfunction
 
-execute 'au BufWrite '.s:path.'/src/*.ts :call Autoformat()'
-execute 'au BufWrite '.s:path.'/.eslintrc.json :call Autoformat()'
+execute 'au BufWrite '.s:path.'/*.ts :call Autoformat()'
 execute 'au BufWrite '.s:path.'/*.json :call Autoformat()'
 execute 'au BufWrite '.s:path.'/*.js :call Autoformat()'

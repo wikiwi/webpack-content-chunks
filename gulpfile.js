@@ -64,7 +64,11 @@ gulp.task("eslint", () => {
 });
 
 gulp.task("jsonlint", () => {
-  return gulp.src("./*.json", { dot: true })
+  return gulp.src([
+    "./*.json",
+    "./test/**/*.json",
+    "./src/**/*.json",
+  ], { dot: true })
     .pipe(jsonlint())
     .pipe(jsonlint.reporter());
 });
