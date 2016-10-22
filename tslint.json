@@ -9,10 +9,6 @@
       true,
       "check-space"
     ],
-    "indent": [
-      true,
-      "spaces"
-    ],
     "no-inferrable-types": true,
     "no-duplicate-variable": true,
     "no-eval": true,
@@ -20,7 +16,6 @@
     "no-namespace": true,
     "no-reference": true,
     "no-trailing-whitespace": true,
-    "no-unsafe-finally": true,
     "no-var-keyword": true,
     "no-var-requires": true,
     "no-shadowed-variable": true,
@@ -35,11 +30,6 @@
     "no-switch-case-fall-through": true,
     "no-unsafe-finally": true,
     "curly": true,
-    "one-line": [
-      true,
-      "check-open-brace",
-      "check-whitespace"
-    ],
     "quotemark": [
       true,
       "double"
@@ -93,7 +83,6 @@
     "no-angle-bracket-type-assertion": true,
     "new-parens": true,
     "jsdoc-format": true,
-    "class-name": true,
     "arrow-parens": true,
     "no-consecutive-blank-lines": true,
     "object-literal-shorthand": true,
