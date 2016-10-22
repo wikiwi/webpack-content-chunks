@@ -26,7 +26,13 @@
     "prefer-const": ["error"],
     "prefer-arrow-callback": ["error"],
     "prefer-template": ["error"],
-    "indent": ["error", 2],
+    "indent": ["error", 2, {
+      "MemberExpression": 1,
+      "VariableDeclarator": 1,
+      "FunctionDeclaration": 1,
+      "FunctionExpression": 1,
+      "SwitchCase": 1
+    }],
     "linebreak-style": ["error", "unix"],
     "brace-style": ["error"],
     "camelcase": ["error"],
