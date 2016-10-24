@@ -5,7 +5,7 @@
   "homepage": "https://github.com/wikiwi/webpack-content-chunks",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wikiwi/webpack-content-chunks.git"
+    "url": "git+https://github.com/wikiwi/webpack-content-chunks.git"
   },
   "bugs": {
     "url": "https://github.com/wikiwi/webpack-content-chunks/issues"
