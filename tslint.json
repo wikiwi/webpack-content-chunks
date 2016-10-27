@@ -32,7 +32,8 @@
     "curly": true,
     "quotemark": [
       true,
-      "double"
+      "double",
+      "avoid-escape"
     ],
     "semicolon": [
       true,
@@ -45,7 +46,6 @@
     "typedef": [
       true,
       "call-signature",
-      "parameter",
       "property-declaration",
       "member-variable-declaration"
     ],
