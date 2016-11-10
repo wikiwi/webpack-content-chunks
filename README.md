@@ -20,10 +20,13 @@ A solution for adding webpack content chunks to the server response.
   * [`__filename` always returns /index.js](#__filename-always-returns-indexjs)
 - [API Reference](#api-reference)
   * [`WebpackContentChunks`](#webpackcontentchunks)
-    + [`constructor(stats: Object)`](#constructorstats-object)
     + [`addChunksFrom(moduleName: string, codeSplit: number)`](#addchunksfrommodulename-string-codesplit-number)
     + [`getFiles(): Array<string>`](#getfiles-arraystring)
     + [`reset()`](#reset)
+  * [`WebpackContentChunks`](#webpackcontentchunks-1)
+    + [`addChunksFrom(moduleName: string, codeSplit: number)`](#addchunksfrommodulename-string-codesplit-number-1)
+    + [`getFiles(): Array<string>`](#getfiles-arraystring-1)
+    + [`reset()`](#reset-1)
 - [Contributions](#contributions)
 
 <!-- tocstop -->
@@ -150,7 +153,27 @@ node: {
 
 A class for adding content chunks and retrieving files from added chunks.
 
-#### `constructor(stats: Object)`
+#### `addChunksFrom(moduleName: string, codeSplit: number)`
+
+Adds all content chunks that originated from the nth-codesplit in
+given module.
+
+**Parameters**
+
+-   `moduleName`: **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** - Name of module, can be obtained using node's \_\_filename feature.
+-   `codeSplit`: **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** - Defines nth-codesplit starting at 0.
+
+#### `getFiles(): Array<string>`
+
+Returns an array of files from added chunks.
+
+Returns: **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>** - Array of files.
+
+#### `reset()`
+
+Resets instance as if no chunks has been added.
+
+### `WebpackContentChunks`
 
 **Parameters**
 
@@ -178,7 +201,7 @@ Resets instance as if no chunks has been added.
 
 ## Contributions
 
-Contributions welcome! Make sure to pass `$ npm run test` and run `$ npm run docs` when your changes affects the documentation.
+Contributions welcome! Make sure to pass `$ npm run lint && npm run test` and run `$ npm run docs` when your changes affects the documentation.
 
 [npm version]: https://www.npmjs.com/package/webpack-content-chunks
 

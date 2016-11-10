@@ -2,4 +2,6 @@
 /coverage/
 /npm-debug.log
 /dist/
+/cjs/
+/lib/
 /api.md

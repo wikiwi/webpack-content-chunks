@@ -2,13 +2,13 @@
   "compilerOptions": {
     "target": "es5",
     "module": "es6",
-    "noImplicitAny": true,
-    "noFallthroughCasesInSwitch": true,
-    "sourceMap": true
+    "noImplicitAny": true
   },
   "include": [
     "./src/**/*.ts",
-    "./src/**/*.d.ts"
+    "./src/**/*.d.ts",
+    "./test/**/*.ts",
+    "./test/**/*.d.ts"
   ],
   "exclude": [
     "node_modules"
