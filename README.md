@@ -27,6 +27,10 @@ A solution for adding webpack content chunks to the server response.
     + [`addChunksFrom(moduleName: string, codeSplit: number)`](#addchunksfrommodulename-string-codesplit-number-1)
     + [`getFiles(): Array<string>`](#getfiles-arraystring-1)
     + [`reset()`](#reset-1)
+  * [`WebpackContentChunks`](#webpackcontentchunks-2)
+    + [`addChunksFrom(moduleName: string, codeSplit: number)`](#addchunksfrommodulename-string-codesplit-number-2)
+    + [`getFiles(): Array<string>`](#getfiles-arraystring-2)
+    + [`reset()`](#reset-2)
 - [Contributions](#contributions)
 
 <!-- tocstop -->
@@ -148,6 +152,35 @@ node: {
 ```
 
 ## API Reference
+
+### `WebpackContentChunks`
+
+**Meta**
+
+-   **license**: Copyright (C) 2016 Chi Vinh Le and contributors.
+
+    This software may be modified and distributed under the terms
+    of the MIT license. See the LICENSE file for details.
+
+#### `addChunksFrom(moduleName: string, codeSplit: number)`
+
+Adds all content chunks that originated from the nth-codesplit in
+given module.
+
+**Parameters**
+
+-   `moduleName`: **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** - Name of module, can be obtained using node's \_\_filename feature.
+-   `codeSplit`: **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** - Defines nth-codesplit starting at 0.
+
+#### `getFiles(): Array<string>`
+
+Returns an array of files from added chunks.
+
+Returns: **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>** - Array of files.
+
+#### `reset()`
+
+Resets instance as if no chunks has been added.
 
 ### `WebpackContentChunks`
 
