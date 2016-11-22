@@ -10,9 +10,9 @@ const yamllint = require("gulp-yaml-validate");
 const sourcemaps = require("gulp-sourcemaps");
 
 const files = {
-  tsWithoutTest: ["./src/**/*.ts", "./src/**/*.tsx", "!./src/**/*.spec.tsx", "!./src/**/*.spec.ts"],
-  tsWithTest: ["./src/**/*.ts", "./src/**/*.tsx", "test/**/*.ts", "test/**/*.tsx"],
-  json: ["./*.json", "./.nycrc"],
+  tsWithoutTest: ["./src/**/*.ts", "!./src/**/*.spec.ts"],
+  tsWithTest: ["./src/**/*.ts", "test/**/*.ts"],
+  json: ["./*.json"],
   yaml: ["./*.yml"],
   js: ["./*.js"],
 };
