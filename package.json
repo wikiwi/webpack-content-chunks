@@ -67,7 +67,6 @@
     "markdown-toc": "^0.13.0",
     "merge2": "^1.0.2",
     "mocha": "^3.1.0",
-    "object-assign": "^4.1.0",
     "ts-node": "~1.2.3",
     "tslint": "^3.15.1",
     "typescript": "^2.0.3",
