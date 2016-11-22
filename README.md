@@ -232,10 +232,6 @@ Returns: **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 Resets instance as if no chunks has been added.
 
-## Contributions
-
-Contributions welcome! Make sure to pass `$ npm run lint && npm run test` and run `$ npm run docs` when your changes affects the documentation.
-
 [npm version]: https://www.npmjs.com/package/webpack-content-chunks
 
 [npm version widget]: https://img.shields.io/npm/v/webpack-content-chunks.svg?style=flat-square
