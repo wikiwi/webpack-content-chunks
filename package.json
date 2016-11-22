@@ -19,13 +19,13 @@
   "main": "./cjs/index.js",
   "typings": "./lib/index.d.ts",
   "scripts": {
-    "all": "npm run lint && npm run test && npm run docs",
+    "all": "npm run lint && npm run test && npm run build:docs",
     "build": "gulp && webpack",
+    "build:docs": "npm run build && documentation build lib/index.js --theme node_modules/documentation-markdown-api-theme -f html -o api.md && cat api.md | add-text-to-markdown -w --section 'API Reference' ./README.md && rm api.md && markdown-toc -i README.md",
     "clean": "rm -r -f dist lib cjs coverage",
     "lint": "gulp lint",
     "release": "npm version -m 'webpack-content-chunks release %s'",
     "ci:coveralls": "cat coverage/lcov.info | coveralls",
-    "docs": "npm run build && documentation build lib/index.js --theme node_modules/documentation-markdown-api-theme -f html -o api.md && cat api.md | add-text-to-markdown -w --section 'API Reference' ./README.md && rm api.md && markdown-toc -i README.md",
     "test": "cross-env TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}'  mocha --opts mocha.opts",
     "test:coverage": "cross-env TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' istanbul cover node_modules/.bin/_mocha -- --opts mocha.opts",
     "test:watch": "npm run test -- --watch"
