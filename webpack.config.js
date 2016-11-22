@@ -12,7 +12,7 @@ const config = {
   resolve: { extensions: [".ts"] },
   module: {
     rules: [
-      { test: /\.ts$/, loader: "awesome-typescript", exclude: "/node_modules/" },
+      { test: /\.ts$/, loader: "awesome-typescript-loader", exclude: "/node_modules/" },
     ],
   },
   output: {
