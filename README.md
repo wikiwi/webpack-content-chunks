@@ -6,6 +6,18 @@ A solution for adding webpack content chunks to the server response.
 [![Build Status Widget]][build status]
 [![Coverage Status Widget]][coverage status]
 
+[npm version]: https://www.npmjs.com/package/webpack-content-chunks
+
+[npm version widget]: https://img.shields.io/npm/v/webpack-content-chunks.svg?style=flat-square
+
+[build status]: https://travis-ci.org/wikiwi/webpack-content-chunks
+
+[build status widget]: https://img.shields.io/travis/wikiwi/webpack-content-chunks/master.svg?style=flat-square
+
+[coverage status]: https://coveralls.io/github/wikiwi/webpack-content-chunks?branch=master
+
+[coverage status widget]: https://img.shields.io/coveralls/wikiwi/webpack-content-chunks/master.svg?style=flat-square
+
 ## TOC
 
 <!-- toc -->
@@ -20,18 +32,10 @@ A solution for adding webpack content chunks to the server response.
   * [`__filename` always returns /index.js](#__filename-always-returns-indexjs)
 - [API Reference](#api-reference)
   * [`WebpackContentChunks`](#webpackcontentchunks)
+    + [`constructor(stats: Object)`](#constructorstats-object)
     + [`addChunksFrom(moduleName: string, codeSplit: number)`](#addchunksfrommodulename-string-codesplit-number)
     + [`getFiles(): Array<string>`](#getfiles-arraystring)
     + [`reset()`](#reset)
-  * [`WebpackContentChunks`](#webpackcontentchunks-1)
-    + [`addChunksFrom(moduleName: string, codeSplit: number)`](#addchunksfrommodulename-string-codesplit-number-1)
-    + [`getFiles(): Array<string>`](#getfiles-arraystring-1)
-    + [`reset()`](#reset-1)
-  * [`WebpackContentChunks`](#webpackcontentchunks-2)
-    + [`addChunksFrom(moduleName: string, codeSplit: number)`](#addchunksfrommodulename-string-codesplit-number-2)
-    + [`getFiles(): Array<string>`](#getfiles-arraystring-2)
-    + [`reset()`](#reset-2)
-- [Contributions](#contributions)
 
 <!-- tocstop -->
 
@@ -155,58 +159,9 @@ node: {
 
 ### `WebpackContentChunks`
 
-**Meta**
-
--   **license**: Copyright (C) 2016 Chi Vinh Le and contributors.
-
-    This software may be modified and distributed under the terms
-    of the MIT license. See the LICENSE file for details.
-
-#### `addChunksFrom(moduleName: string, codeSplit: number)`
-
-Adds all content chunks that originated from the nth-codesplit in
-given module.
-
-**Parameters**
-
--   `moduleName`: **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** - Name of module, can be obtained using node's \_\_filename feature.
--   `codeSplit`: **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** - Defines nth-codesplit starting at 0.
-
-#### `getFiles(): Array<string>`
-
-Returns an array of files from added chunks.
-
-Returns: **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>** - Array of files.
-
-#### `reset()`
-
-Resets instance as if no chunks has been added.
-
-### `WebpackContentChunks`
-
 A class for adding content chunks and retrieving files from added chunks.
 
-#### `addChunksFrom(moduleName: string, codeSplit: number)`
-
-Adds all content chunks that originated from the nth-codesplit in
-given module.
-
-**Parameters**
-
--   `moduleName`: **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** - Name of module, can be obtained using node's \_\_filename feature.
--   `codeSplit`: **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** - Defines nth-codesplit starting at 0.
-
-#### `getFiles(): Array<string>`
-
-Returns an array of files from added chunks.
-
-Returns: **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>** - Array of files.
-
-#### `reset()`
-
-Resets instance as if no chunks has been added.
-
-### `WebpackContentChunks`
+#### `constructor(stats: Object)`
 
 **Parameters**
 
@@ -231,15 +186,3 @@ Returns: **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 #### `reset()`
 
 Resets instance as if no chunks has been added.
-
-[npm version]: https://www.npmjs.com/package/webpack-content-chunks
-
-[npm version widget]: https://img.shields.io/npm/v/webpack-content-chunks.svg?style=flat-square
-
-[build status]: https://travis-ci.org/wikiwi/webpack-content-chunks
-
-[build status widget]: https://img.shields.io/travis/wikiwi/webpack-content-chunks/master.svg?style=flat-square
-
-[coverage status]: https://coveralls.io/github/wikiwi/webpack-content-chunks?branch=master
-
-[coverage status widget]: https://img.shields.io/coveralls/wikiwi/webpack-content-chunks/master.svg?style=flat-square

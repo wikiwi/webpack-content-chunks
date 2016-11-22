@@ -21,12 +21,12 @@ function onBuildError() {
   this.once("finish", () => process.exit(1));
 }
 
-function build(dest, module) {
+function build(dest, module, target) {
   return () => {
     const tsProject = ts.createProject("tsconfig.json", {
       noEmitOnError: true,
       declaration: dest === "lib",
-      target: "es5",
+      target,
       module,
     });
     const tsResult = gulp.src(files.tsWithoutTest)
@@ -42,8 +42,9 @@ function build(dest, module) {
   };
 }
 
-gulp.task("lib", build("lib", "es6"));
-gulp.task("commonjs", build("cjs", "commonjs"));
+gulp.task("es6", build("es6", "es6", "es6"));
+gulp.task("lib", build("lib", "es6", "es6"));
+gulp.task("commonjs", build("cjs", "commonjs", "es6"));
 
 gulp.task("tslint", () => {
   return gulp.src(files.tsWithTest)

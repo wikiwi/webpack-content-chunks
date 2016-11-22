@@ -19,10 +19,10 @@
   "main": "./cjs/index.js",
   "typings": "./lib/index.d.ts",
   "scripts": {
-    "all": "npm run lint && npm run test && npm run build:docs",
+    "all": "npm run lint && npm run test && npm run build:docs && npm run build",
     "build": "gulp && webpack",
-    "build:docs": "npm run build && documentation build lib/index.js --theme node_modules/documentation-markdown-api-theme -f html -o api.md && cat api.md | add-text-to-markdown -w --section 'API Reference' ./README.md && rm api.md && markdown-toc -i README.md",
-    "clean": "rm -r -f dist lib cjs coverage",
+    "build:docs": "gulp es6 && documentation build es6/index.js --theme node_modules/documentation-markdown-api-theme -f html -o api.md && cat api.md | add-text-to-markdown -w --section 'API Reference' ./README.md && rm api.md && markdown-toc -i README.md",
+    "clean": "rm -r -f dist lib cjs coverage es6",
     "lint": "gulp lint",
     "release": "npm version -m 'webpack-content-chunks release %s'",
     "ci:coveralls": "cat coverage/lcov.info | coveralls",

@@ -5,7 +5,7 @@
     "object-literal-sort-keys": false,
     "forin": false,
     "no-string-literal": false,
-    "file-header": [true, "@license"],
+    "file-header": [true, "Copyright \\(C\\) \\d{4}"],
     "no-switch-case-fall-through": true,
 
     "adjacent-overload-signatures": true,
